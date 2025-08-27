@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const typingElement = document.querySelector("#typing-effect");
   if (typingElement) {
     const typed = new Typed("#typing-effect", {
-      strings: ["Analista de Dados", "Entusiasta de Dados", "Entusiasta de AI"],
+      strings: ["Analista de Dados.", "Entusiasta de Dados.", "Entusiasta de AI."],
       typeSpeed: 75,
       backSpeed: 50,
       backDelay: 1500,

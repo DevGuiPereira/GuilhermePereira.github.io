@@ -142,6 +142,12 @@ section h2 {
   line-height: 1.6;
 }
 
+#sobre h3 {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 25px; /* Aumenta o espaço entre o título e os cards */
+  font-size: 1.5rem; /* Deixa o tamanho consistente com o h2 da seção de início */
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
