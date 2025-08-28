@@ -101,7 +101,7 @@ section h2 {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  height: 100vh;
+  height: 110vh;
 }
 
 .profile-pic {
@@ -299,11 +299,9 @@ footer p {
   padding-bottom: 2px;
 }
 
-
 /* REGRAS DE RESPONSIVIDADE                  */
 
 @media (max-width: 768px) {
-
   /* --- AJUSTES GERAIS --- */
   section {
     padding: 80px 5%;
@@ -331,7 +329,7 @@ footer p {
     border-radius: 2px;
     transition: all 0.3s ease;
   }
-  
+
   nav ul {
     display: none;
     flex-direction: column;
@@ -343,7 +341,7 @@ footer p {
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    background-color: #161B22;
+    background-color: #161b22;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 120px;
     padding-left: 2rem;
