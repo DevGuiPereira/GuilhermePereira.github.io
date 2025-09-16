@@ -327,6 +327,69 @@ footer p {
   padding-bottom: 2px;
 }
 
+/* Estilo para a Seção de Destaques e Apresentações */
+.destaques-container {
+  max-width: 800px; /* Limita a largura para melhor leitura */
+  margin: 0 auto;
+}
+
+.destaque-card {
+  display: flex;
+  gap: 25px;
+  background-color: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.destaque-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
+  border-color: rgba(var(--accent-rgb), 0.5);
+}
+
+.destaque-imagem-link {
+  display: block;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.destaque-imagem-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.destaque-imagem-link:hover img {
+  transform: scale(1.05);
+}
+
+.destaque-info h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.destaque-info h4 {
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.destaque-info p {
+  margin-bottom: 20px;
+}
+
+.btn-destaque {
+  display: inline-block;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* REGRAS DE RESPONSIVIDADE                  */
 
 @media (max-width: 768px) {
@@ -408,5 +471,13 @@ footer p {
   /* --- OUTRAS SEÇÕES --- */
   .projetos-container {
     grid-template-columns: 1fr;
+  }
+
+  /* --- SEÇÃO DE DESTAQUES --- */
+  .destaque-card {
+    flex-direction: column; /* Coloca a imagem em cima do texto */
+  }
+  .destaque-imagem-link {
+    max-width: 100%; /* Permite que a imagem ocupe a largura total */
   }
 }
