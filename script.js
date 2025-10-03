@@ -10,13 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
     });
   }
-
-  // --- MENU HAMBURGUER ---
-  const hamburger = document.querySelector(".hamburger-menu");
-  const nav = document.querySelector("nav");
-  if (hamburger && nav) {
-    hamburger.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  }
 });
+
+// --- FUNCIONALIDADE DO MENU HAMBÚRGUER ---
+const hamburger = document.querySelector(".hamburger-menu");
+const nav = document.querySelector("nav");
+// Verifica se o menu hambúrguer existe na página antes de adicionar o evento
+if (hamburger && nav) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}

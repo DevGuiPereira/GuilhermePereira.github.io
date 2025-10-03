@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilherme Pereira | Portfólio</title>
+
     <meta
       name="description"
       content="Portfólio de Guilherme Pereira, Analista e Entusiasta de Dados e AI, apresentando projetos, habilidades e experiência profissional."
@@ -19,18 +21,7 @@
       property="og:image"
       content="https://DevGuiPereira.github.io/img/perfil.jpg"
     />
-    <title>Guilherme Pereira | Portfólio</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -48,57 +39,67 @@
       sizes="16x16"
       href="./img/favicon-16x16.png"
     />
+    <link rel="manifest" href="./img/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
+    <a href="#inicio" class="skip-link">Pular para o conteúdo principal</a>
+
     <header>
       <nav>
         <a href="#" class="logo"><i class="fa-solid fa-database"></i></a>
-        <ul>
-          <li><a href="#sobre">Sobre Mim</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#destaques">Destaques</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="hamburger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
+        <a
+          href="./assets/GuilhermeReisPereira.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-header"
+          >Download CV</a
+        >
       </nav>
     </header>
 
     <main>
       <section id="inicio">
-        <div class="inicio-content">
+        <a
+          href="https://www.instagram.com/guilherme_reispereira/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-pic-link"
+        >
+          <img
+            src="./img/perfil.jpeg"
+            alt="Foto de perfil de Guilherme Pereira, sorrindo e usando uma camisa branca"
+            class="profile-pic"
+            loading="lazy"
+          />
+        </a>
+        <h1>Guilherme Pereira</h1>
+        <h2>Eu sou&nbsp;<span id="typing-effect"></span></h2>
+        <div class="social-links">
           <a
-            href="https://www.instagram.com/guilherme_reispereira/"
+            href="https://linkedin.com/in/guilherme-reis-pereira/"
             target="_blank"
-            rel="noopener noreferrer"
-            class="profile-pic-link"
-          >
-            <img
-              src="./img/perfil2.JPEG"
-              alt="Foto de perfil de Guilherme Pereira"
-              class="profile-pic"
-              loading="lazy"
-            />
-          </a>
-          <h1>Guilherme Pereira</h1>
-          <h2>Eu sou&nbsp;<span id="typing-effect"></span></h2>
-          <div class="social-links">
-            <a
-              href="https://linkedin.com/in/guilherme-reis-pereira/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://github.com/DevGuiPereira" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="mailto:guilhermerp2004@gmail.com"
-              ><i class="fa-solid fa-envelope"></i
-            ></a>
-          </div>
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/DevGuiPereira" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="mailto:guilhermerp2004@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
         </div>
       </section>
 
@@ -119,37 +120,91 @@
           <div class="skill-card">
             <i class="fa-brands fa-python"></i> Python
           </div>
-          <!---<div class="skill-card"><i class="fa-solid fa-star"></i> PySpark</div>-->
           <div class="skill-card">
             <i class="fa-solid fa-database"></i> MySQL
           </div>
-          <!---<div class="skill-card">
-            <i class="fa-solid fa-cloud"></i> Google Cloud
-          </div>-->
           <div class="skill-card">
             <i class="fa-solid fa-table-cells"></i> Google Sheets
           </div>
-          <!--<div class="skill-card">
-            <i class="fa-solid fa-chart-simple"></i> Looker Studio
-          </div>-->
         </div>
-        <div class="btn-container">
-          <a
-            href="./assets/GuilhermeReisPereira.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn"
-          >
-            Download CV <i class="fa-solid fa-download"></i>
-          </a>
+      </section>
+
+      <section id="certificacoes">
+        <h2><i class="fa-solid fa-award"></i> Certificações</h2>
+        <div class="certificacoes-carousel">
+          <div class="cert-card">
+            <div class="card-header">
+              <img
+                src="./img/logo-oracle.png"
+                alt="Logo da Oracle"
+                class="card-logo-img"
+              />
+              <span class="card-tag tag-professional">Professional</span>
+            </div>
+            <div class="card-body">
+              <h3>
+                Oracle Cloud Infrastructure 2025 Certified Data Science
+                Professional
+              </h3>
+              <h4>Oracle University</h4>
+              <p>
+                Certificação avançada para cientistas de dados que comprova
+                habilidades em criação, gestão e aplicação de boas práticas em
+                machine learning na Oracle Cloud.
+              </p>
+            </div>
+            <hr class="card-separator" />
+            <div class="card-footer">
+              <span><i class="fa-solid fa-calendar-days"></i> 2025</span>
+              <a
+                href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=5A2726879324D380C1F810BC624FA2D5D0FEC093FC88BF76C7C17FC2340E2BD4"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="card-header">
+              <img
+                src="./img/logo-oracle.png"
+                alt="Logo da Oracle"
+                class="card-logo-img"
+              />
+              <span class="card-tag tag-foundation">Foundation</span>
+            </div>
+            <div class="card-body">
+              <h3>Oracle Data Platform 2025 Certified Foundations Associate</h3>
+              <h4>Oracle Cloud</h4>
+              <p>Conhecimentos fundamentais em serviços cloud da Oracle.</p>
+            </div>
+            <hr class="card-separator" />
+            <div class="card-footer">
+              <span><i class="fa-solid fa-calendar-days"></i> 2024</span>
+              <a
+                href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=5A2726879324D380C1F810BC624FA2D5B4BF9BFE3A7ABA7D4A5B33494E8D41AD"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-container">
+          <div class="stat-box">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Certificações</span>
+          </div>
         </div>
       </section>
 
       <section id="experiencia">
-        <h2>Experiência Profissional</h2>
+        <h2><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <h3>Freelance</h3>
+            <h3><i class="fa-solid fa-briefcase"></i> Freelance</h3>
             <h4>Do It Gestão Estratégica | Jul 2025 - Atual</h4>
             <p>
               Desenvolvimento e implementação de fluxos automatizados integrando
@@ -157,95 +212,79 @@
               reduzir atividades manuais.
             </p>
           </div>
+
           <div class="timeline-item">
-            <h3>Suporte de Software</h3>
+            <h3><i class="fa-solid fa-briefcase"></i> Suporte de Software</h3>
             <h4>Ranor Telemetria | Jan 2025 - Jun 2025</h4>
             <p>
               Atendimento técnico a clientes corporativos de grande porte,
               prestando suporte especializado para software de rastreamento e
-              gestão logística. Identificação e solução de problemas de forma
-              ágil, acompanhamento de chamados, testes e validação de
-              funcionalidades. Garantia de disponibilidade e estabilidade do
-              sistema, contribuindo para a eficiência operacional dos clientes.
+              gestão logística...
             </p>
           </div>
+
           <div class="timeline-item">
-            <h3>Estagiário</h3>
+            <h3><i class="fa-solid fa-briefcase"></i> Estagiário</h3>
             <h4>Sicredi das Culturas RS/MG | Mar 2024 - Jan 2025</h4>
             <p>
               Atendimento ao cliente, abertura de contas financeiras,
               organização e controle de arquivos físicos e online.
             </p>
           </div>
+
           <div class="timeline-item">
-            <h3>Jovem Aprendiz</h3>
+            <h3><i class="fa-solid fa-briefcase"></i> Jovem Aprendiz</h3>
             <h4>Sicredi das Culturas RS/MG | Nov 2022 - Fev 2024</h4>
             <p>
               Atendimento ao cliente, organização e controle de arquivos físicos
-              e online, aprendizado sobre mercado de trabalho, inteligência
-              emocional e competências em geral.
+              e online, aprendizado sobre mercado de trabalho...
             </p>
           </div>
         </div>
       </section>
+
       <section id="destaques">
-        <h2>Destaques</h2>
+        <h2><i class="fa-solid fa-star"></i> Destaques</h2>
         <div class="destaques-container">
           <div class="destaque-card">
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7373402234316902400/" target="_blank" rel="noopener noreferrer" class="destaque-imagem-link">
-              <img src="./img/palestraIA.JPEG" alt="Imagem da palestra sobre Análise de Dados" loading="lazy">
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7373402234316902400/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="destaque-imagem-link"
+            >
+              <img
+                src="./img/palestraIA.jpeg"
+                alt="Imagem da palestra sobre Inteligência Artificial na Nutrição"
+                loading="lazy"
+              />
             </a>
             <div class="destaque-info">
               <h3>Palestra: Como Utilizar a IA na Nutrição</h3>
-              <h4>VIº Semana Acadêmica de Nutrição - UEMG | Set 2025</h4>
+              <h4>VI Semana Acadêmica de Nutrição - UEMG | Set 2025</h4>
               <p>
-                Uma apresentação focada em como a Inteligência Artificial pode ser uma poderosa aliada para 
-                profissionais da nutrição. Foi abordado a aplicação de IAs para automação de rotinas e atendimento, 
-                o uso estratégico de prompts de comando e os cuidados indispensáveis com a ética, 
-                dados sensíveis (LGPD) e a proteção de dados. 
+                Uma apresentação focada em como a Inteligência Artificial pode
+                ser uma poderosa aliada para profissionais da nutrição,
+                abordando a aplicação de IAs para automação de rotinas,
+                atendimento, e os cuidados com a ética e LGPD.
               </p>
-              <p>
-                Confira os detalhes no LinkedIn.
-              </p>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7373402234316902400/" target="_blank" rel="noopener noreferrer" class="btn-destaque">
-                Ver no LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7373402234316902400/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-destaque"
+              >
+                Ver no LinkedIn
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
-          </div>
-      </section>
-
-      <!--<section id="projetos">
-        <h2>Meus Projetos</h2>
-        <div class="projetos-container">
-          <div class="projeto-card">
-            <h3>Nome do Projeto 1</h3>
-            <p>
-              Breve descrição do projeto, o problema que ele resolve e as
-              tecnologias utilizadas.
-            </p>
-            <a href="#" target="_blank"
-              >Ver no GitHub
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
-            ></a>
-          </div>
-          <div class="projeto-card">
-            <h3>Nome do Projeto 2</h3>
-            <p>
-              Breve descrição do projeto, o problema que ele resolve e as
-              tecnologias utilizadas.
-            </p>
-            <a href="#" target="_blank"
-              >Ver no GitHub
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
-            ></a>
-          </div>
         </div>
-      </section>-->
+      </section>
     </main>
 
     <footer id="contato">
-      <h2>Entre em Contato</h2>
+      <h2><i class="fa-solid fa-paper-plane"></i> Entre em Contato</h2>
       <p>
         Estou disponível para novas oportunidades e colaborações. Vamos
         conversar!
@@ -268,6 +307,7 @@
       </div>
       <p class="copyright">© 2025 - Guilherme Pereira</p>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./script.js"></script>
   </body>
