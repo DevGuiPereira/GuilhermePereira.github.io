@@ -189,7 +189,7 @@ section h2 {
   border-radius: 8px;
 }
 
-/* Seção Certificações */
+/* Seção Certificações (COM CARROSSEL HORIZONTAL) */
 .section-subtitle {
   text-align: center;
   margin-top: -30px;
@@ -208,21 +208,38 @@ section h2 {
 }
 
 .certificacoes-carousel {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 360px;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 25px;
+  overflow-x: auto;
   padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+}
+
+/* Estilo da barra de rolagem */
+.certificacoes-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.certificacoes-carousel::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+.certificacoes-carousel::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .cert-card {
-  flex-basis: 360px;
+  scroll-snap-align: start; /* Alinha o card no início da tela ao rolar */
   display: flex;
   flex-direction: column;
   padding: 30px;
   border-radius: 12px;
 }
 
+/* O restante do estilo do card continua o mesmo... */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -258,6 +275,10 @@ section h2 {
   min-height: 110px;
 }
 
+.cert-card .card-body {
+  flex-grow: 1;
+}
+
 .cert-card .card-body h3 {
   font-size: 1.25rem;
   color: var(--font-color);
@@ -283,12 +304,12 @@ section h2 {
   margin: 20px 0;
 }
 
-.cert-card .card-footer {
+.card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* Empurra o rodapé para o fundo do card */
-  padding-top: 20px; /* Espaço acima do rodapé */
+  margin-top: auto;
+  padding-top: 20px;
   font-size: 0.9rem;
   opacity: 0.6;
 }
@@ -404,7 +425,7 @@ section h2 {
 }
 
 .timeline-item h3 i {
-  margin-right: 10px; /* Espaço entre o ícone da maleta e o texto */
+  margin-right: 10px;
   font-size: 1.1rem;
 }
 
@@ -533,7 +554,6 @@ footer p {
   padding-bottom: 2px;
 }
 
-/* Espaçamento para os ícones nos títulos das seções e rodapé */
 section h2 i,
 footer h2 i {
   margin-right: 15px;
@@ -565,7 +585,7 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* REGRAS DE RESPONSIVIDADE                  */
+/* REGRAS DE RESPONSIVIDADE */
 @media (max-width: 768px) {
   /* --- AJUSTES GERAIS --- */
   section {
@@ -590,5 +610,9 @@ button:focus-visible {
   }
   .destaque-imagem-link {
     max-w: 100%;
+  }
+  .certificacoes-carousel {
+    justify-content: flex-start;
+    grid-auto-columns: 85%;
   }
 }
