@@ -609,7 +609,7 @@ button:focus-visible {
     flex-direction: column;
   }
   .destaque-imagem-link {
-    max-w: 100%;
+    max-width: 100%;
   }
   .certificacoes-carousel {
     justify-content: flex-start;
