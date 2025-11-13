@@ -208,38 +208,47 @@ section h2 {
 }
 
 .certificacoes-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 360px;
-  justify-content: center;
+  display: flex;
   gap: 25px;
   overflow-x: auto;
   padding: 20px;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Truque de centralização com margem automática */
+.certificacoes-carousel .cert-card:first-child {
+  margin-left: auto;
+}
+
+.certificacoes-carousel .cert-card:last-child {
+  margin-right: auto;
 }
 
 /* Estilo da barra de rolagem */
 .certificacoes-carousel::-webkit-scrollbar {
   height: 8px;
 }
+
 .certificacoes-carousel::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
   border-radius: 4px;
 }
+
 .certificacoes-carousel::-webkit-scrollbar-track {
   background: transparent;
 }
 
 .cert-card {
-  scroll-snap-align: start; /* Alinha o card no início da tela ao rolar */
+  flex: 0 0 360px;
+  /* Largura fixa para os cards no carrossel */
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   padding: 30px;
   border-radius: 12px;
 }
 
-/* O restante do estilo do card continua o mesmo... */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -324,44 +333,29 @@ section h2 {
   color: var(--accent-color);
 }
 
-/* Estatísticas */
 /* Estatísticas (NOVO ESTILO CIRCULAR) */
 .stats-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Permite que os círculos quebrem a linha em telas menores */
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 80px;
 }
 
 .stat-box {
-  /* Define o formato do círculo */
   width: 160px;
   height: 160px;
   border-radius: 50%;
-
-  /* Centraliza o conteúdo dentro do círculo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Estilos visuais (mantidos do seu tema) */
-  background-color: var(--primary-color);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.stat-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
-  border-color: rgba(var(--accent-rgb), 0.5);
 }
 
 .stat-number {
   display: block;
-  font-size: 2.2rem; /* Ajustado para caber no círculo */
+  font-size: 2.2rem;
   font-weight: bold;
   color: var(--accent-color);
   line-height: 1.2;
@@ -380,31 +374,29 @@ section h2 {
   padding-left: 30px;
 }
 
-/* A linha vertical da timeline */
 .timeline::before {
   content: "";
   position: absolute;
   left: 6px;
-  top: 10px;
+  top: 15px;
   bottom: 10px;
   width: 2px;
   background-color: var(--primary-color);
 }
 
 .timeline-item {
-  position: relative; /* Essencial para posicionar a bolinha */
+  position: relative;
   padding: 25px;
   border-radius: 12px;
   margin-bottom: 30px;
-  padding-left: 35px; /* Espaço interno para o conteúdo não colar na bolinha */
+  padding-left: 35px;
 }
 
-/* A bolinha de cada item */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -34px; /* Posição da bolinha sobre a linha vertical */
-  top: 10px;
+  left: -34px;
+  top: 30px;
   width: 14px;
   height: 14px;
   background-color: var(--accent-color);
@@ -415,7 +407,7 @@ section h2 {
 }
 
 .timeline-item:hover::before {
-  transform: scale(1.2); /* Aumenta a bolinha no hover */
+  transform: scale(1.2);
 }
 
 .timeline-item h3 {
@@ -434,6 +426,37 @@ section h2 {
   font-weight: 400;
   opacity: 0.8;
 }
+
+.timeline-item .role-details {
+  margin-top: 20px;
+}
+
+.timeline-item .role-details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--font-color);
+  opacity: 1;
+  margin-bottom: 5px;
+}
+
+.timeline-item .role-details span {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.timeline-item .role-details p {
+  font-size: 0.95rem;
+}
+
+.timeline-item .role-separator {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 25px 0 10px;
+}
+
 
 /* Seção Destaques */
 .destaques-container {
@@ -540,9 +563,11 @@ footer p {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -587,6 +612,7 @@ button:focus-visible {
 
 /* REGRAS DE RESPONSIVIDADE */
 @media (max-width: 768px) {
+
   /* --- AJUSTES GERAIS --- */
   section {
     padding: 80px 5%;
@@ -596,9 +622,11 @@ button:focus-visible {
   #inicio h1 {
     font-size: 2.5rem;
   }
+
   #inicio h2 {
     font-size: 1.2rem;
   }
+
   .profile-pic {
     width: 180px;
     height: 180px;
@@ -608,11 +636,19 @@ button:focus-visible {
   .destaque-card {
     flex-direction: column;
   }
+
   .destaque-imagem-link {
     max-width: 100%;
   }
+
+  /* Ajuste do Carrossel no Mobile */
   .certificacoes-carousel {
-    justify-content: flex-start;
     grid-auto-columns: 85%;
+  }
+
+  .certificacoes-carousel .cert-card:first-child,
+  .certificacoes-carousel .cert-card:last-child {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
