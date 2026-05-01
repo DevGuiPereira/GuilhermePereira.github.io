@@ -296,7 +296,7 @@ const PORTFOLIO_DATA = {
       ],
       "sub": "Information Systems professional focused on Data Analysis, Data Science and Artificial Intelligence.",
       "location": "Brazil",
-      "cta_primary": "Download résumé",
+      "cta_primary": "Download resume",
       "cta_secondary": "See experience",
       "meta_left": "Available for opportunities",
       "meta_right": "Fast response"

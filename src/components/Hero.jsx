@@ -1,3 +1,5 @@
+import resumePdf from '../assets/GuilhermeReisPereira.pdf';
+
 export function Hero({ data, lang }) {
   const t = data.hero;
   return (
@@ -16,8 +18,7 @@ export function Hero({ data, lang }) {
         </h1>
         <p className="hero-sub">{t.sub}</p>
         <div className="hero-actions">
-          {/* TODO: Inserir link de download do currículo aqui */}
-          <a href="assets\GuilhermeReisPereira.pdf" className="btn">
+          <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn">
             {t.cta_primary}
             <span className="btn-arrow">↓</span>
           </a>

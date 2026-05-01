@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+Curriculo_Guilherme_Pereira.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
